@@ -6,8 +6,8 @@ form.addEventListener("submit", function (e) {
   // Prevent the default form submission behavior
   e.preventDefault();
 
-  // Get the value from the input field with the ID "search" and remove leading/trailing spaces
-  var search = document.getElementById("search").value.trim();
+  // Get the value from the input field with the ID "addon-wrapping" and remove leading/trailing spaces
+  var search = document.querySelector(".form-control").value.trim();
 
   // Check if the search input is empty
   if (search === "") {
@@ -21,15 +21,13 @@ form.addEventListener("submit", function (e) {
     .then((response) => {
       // Check if the response status is not OK (HTTP status code other than 200)
       if (!response.ok) {
-        // Throw an error if user is not found
-        throw new Error(`<div id="notfound">User not found!!</div>`);
+        // Throw an error if the user is not found
+        throw new Error("User not found!!");
       }
       // Convert the response to JSON format
       return response.json();
     })
     .then((data) => {
-      console.log(data);
-
       // Display user information in the "result" element using template literals
       document.getElementById("result").innerHTML = `
         <div class="profile">
@@ -43,7 +41,7 @@ form.addEventListener("submit", function (e) {
             <p>Email: ${data.email || "NA"} </p>
             <p>Following: ${data.following || "NA"}</p>
             <p>Company: ${data.company || "NA"}</p>
-            </div>
+          </div>
         </div>
       `;
     })

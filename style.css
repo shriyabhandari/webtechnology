@@ -1,4 +1,4 @@
-.container{
+/* .container{
     height: 10vh;
     width: 100%;
     background-image: url('./image.jpg');
@@ -8,7 +8,8 @@
     background-attachment: fixed;
     top: 0;
     margin: 0%;
-}
+
+} */
 h1{
     text-align: center;
 }

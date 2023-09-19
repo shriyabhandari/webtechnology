@@ -1,25 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link to external stylesheet for custom styling -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Link to Font Awesome icons stylesheet from a CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Page title -->
     <title>Github</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Github User Name</h1>
+
+    <!-- Link to Bootstrap CSS from a CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- First container for main heading -->
+    <div class="container-fluid bg-warning-subtle">
+      <h1>Github User Name</h1>
     </div>
 
+    <!-- Second container for search form and result -->
     <div class="container2">
-        <div class="crash">
-            <form id="myform">
-                <input type="text" id="search" placeholder="Enter Username" required>
-            </form> 
-            <div id="result"></div>
-        </div>
+      <!-- Container for search form -->
+      <div class="crash">
+        <!-- Form for entering GitHub username -->
+        <form id="myform" autocomplete="off">
+          <!-- Input field for GitHub username -->
+          <!-- <input type="text" id="search" class="form-control" placeholder="Enter Username" required> -->
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+        </form>
+        <!-- Container for displaying search results -->
+        <div id="result"></div>
+      </div>
     </div>
+
+    <!-- External JavaScript file for scripting -->
     <script src="script.js"></script>
-</body>
+
+    <!-- Include Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
